@@ -3,7 +3,9 @@
 pub mod sorts;
 
 use crate::sorts::{Sorter,
-                   bubble::BubSort};
+                   bubble::BubSort,
+                   insertion::InsertionSort,
+                   quick::QuickSort};
 
 #[cfg(test)]
 mod tests {
@@ -11,7 +13,7 @@ mod tests {
 
     #[test]
     #[ignore]
-    fn it_works() {
+    fn it_sorts() {
         let mut arr = vec![3, 2, 1, 0];
         sorts::StdSort.sort_this(&mut arr);
         assert_eq!(arr, &[0, 1, 2, 3]);
