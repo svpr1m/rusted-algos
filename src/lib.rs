@@ -1,11 +1,14 @@
 #![allow(unused_imports)]
 
 pub mod sorts;
+pub mod searches;
 
 use crate::sorts::{Sorter,
                    bubble::BubSort,
                    insertion::InsertionSort,
                    quick::QuickSort};
+
+use crate::searches::binary::binary_search;
 
 #[cfg(test)]
 mod tests {
